@@ -36,13 +36,14 @@ class Order
 
   def self.totals
     @@TotalOrders
-  end 
+  end
 
 end
 
 Riley = Order.new("info@riley.com", "CO", 476)
 Howard = Order.new("info@howard.com", "MI", 1003)
 Smith = Order.new("info@smith.com", "NY", 355)
+
 
 
 
@@ -56,3 +57,9 @@ puts "Newsletter Emails:"
 
 puts Riley.total + Howard.total
 puts Order.totals
+
+all_values = []
+Order.totals.each do | key, value |
+  all_values.push(value)
+end
+puts all_values
