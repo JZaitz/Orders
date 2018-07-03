@@ -63,3 +63,15 @@ Order.totals.each do | key, value |
   all_values.push(value)
 end
 puts all_values
+puts total_orders = all_values.reduce(:+)
+puts small_orders = all_values.select {|x| x < 500 }
+puts "***********"
+Order.totals.each do |key, value|
+  if key === "info@riley.com" then puts key else puts "no" end
+
+end
+#one line conditional
+Order.totals.each do |key, value|
+  puts "#{key}: #{value}" if key === "info@riley.com"
+
+end
